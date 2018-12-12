@@ -61,6 +61,8 @@ if (MSVC AND MSVC_STATIC_BUILD)
 	  endif(${flag_var} MATCHES "/MD")
 	endforeach(flag_var)
 endif (MSVC AND MSVC_STATIC_BUILD)
+SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 FILE(GLOB PROTOC_GEN_C_SRC ${MAIN_DIR}/protoc-c/*.h ${MAIN_DIR}/protoc-c/*.cc )
 ADD_EXECUTABLE(protoc-gen-c ${PROTOC_GEN_C_SRC})
 
@@ -147,5 +149,6 @@ ADD_TEST(test-issue220 test-issue220)
 ADD_TEST(test-issue251 test-issue251)
 ADD_TEST(test-version test-version)
 
-
 INCLUDE(CPack)
+
+add_subdirectory(tlib)
