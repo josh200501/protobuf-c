@@ -6,6 +6,10 @@ This is `protobuf-c`, a C implementation of the [Google Protocol Buffers](https:
 
 `protobuf-c` was originally written by Dave Benson and maintained by him through version 0.15 but is now being maintained by a new team. Thanks, Dave!
 
+## Intel SGX support
+
+USE CMakeLists.txt in folder `build-cmake` to generate trusted version libtprotobuf-c.a, Which can be used inside SGX Enclave. Tested on CentOS 7.4.
+
 ## Mailing list
 
 `protobuf-c`'s mailing list is hosted on a [Google Groups forum](https://groups.google.com/forum/#!forum/protobuf-c). Subscribe by sending an email to [protobuf-c+subscribe@googlegroups.com](mailto:protobuf-c+subscribe@googlegroups.com).
