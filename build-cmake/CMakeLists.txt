@@ -96,3 +96,5 @@ ADD_TEST(test-version test-version)
 
 
 INCLUDE(CPack)
+
+add_subdirectory(tlib)
